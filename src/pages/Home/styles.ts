@@ -73,7 +73,7 @@ export const CountdownContainer = styled.div`
   }
 `;
 
-export const Sepatator = styled.div`
+export const Separator = styled.div`
   padding: 2rem 0;
   color: ${(props) => props.theme["green-500"]};
 
