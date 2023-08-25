@@ -11,7 +11,7 @@ import {
 } from "./styles";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
-import { CycleContext } from "../../Contexts/CyclesContext";
+import { CyclesContext } from "../../Contexts/CyclesContext";
 
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>;
 
@@ -25,7 +25,7 @@ const newCycleFormValidationSchema = zod.object({
 
 export function Home() {
   const { createNewCycle, interruptCurrentCycle, activeCycle } =
-    useContext(CycleContext);
+    useContext(CyclesContext);
 
   const newCycleForm = useForm<NewCycleFormData>({
     resolver: zodResolver(newCycleFormValidationSchema),
